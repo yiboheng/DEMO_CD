@@ -12,6 +12,7 @@ node {
    }
    stage('Build') {
       // Run the maven build
+      sh "echo 'build now ........ '"
       if (isUnix()) {
          sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
       } else {
